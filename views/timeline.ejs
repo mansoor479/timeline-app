@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline</title>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <h1 class="header">Timeline</h1>
+  <div class="timeline">
+    <% timeline.forEach((item, index) => { %>
+      <div class="container <%= index % 2 === 0 ? 'left' : 'right' %>">
+        <div class="content">
+          <h2><%= item.date %> - <%= item.author %></h2>
+          <p><%= item.content %></p>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
